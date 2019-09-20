@@ -120,7 +120,7 @@ const getSteps = ($: CheerioStatic) => {
   let allPreparationEls = $('*');
   let filteredPreparationEls = allPreparationEls.filter(function (i, el) {
     // console.log(el.name);
-    return ($(el).text() == ("Directions") || $(el).text() == ("Steps") || $(el).text() == ("Preparation"));
+    return ($(el).text() == ("Directions") || $(el).text() == ("Steps") || $(el).text() == ("Preparation") || $(el).text() == ("Instructions"));
   });
 
   // console.log("filtered Preparation Els length -> " + filteredPreparationEls.length);
