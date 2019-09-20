@@ -1,0 +1,38 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": ["http"],
+  "produces": ["application/json"],
+  "paths": {
+    "/recipe": {
+      "get": {
+        "tags": ["Recipe Importer API"],
+        "summary": "Get Recipe data as JSON by scraping the document located at the specified (valid) URL",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad request"
+          }
+        },
+        "content": {
+          "application/json": {}
+        },
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "description": "Specifies the recipe url to import data from",
+            "required": true,
+            "type": "string"
+          }
+        ]
+      }
+    }
+  }
+}
